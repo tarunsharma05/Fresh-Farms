@@ -13,21 +13,21 @@ function HomeCorousel() {
             <Carousel.Item onClick={() => navigator('/items')}>
                 <img
                     className="d-block w-70"
-                    src='src/assets/images/FARMER2.png'
+                    src='./public/images/FARMER2.png'
                     alt="First slide"
                 />
             </Carousel.Item>
             <Carousel.Item onClick={() => navigator('/items')}>
                 <img
                     className="d-block w-100"
-                    src='src/assets/images/FARMER5.png'
+                    src='./public/images/FARMER5.png'
                     alt="Second slide"
                 />
             </Carousel.Item>
             <Carousel.Item onClick={() => navigator('/items')}>
                 <img
                     className="d-block w-100"
-                    src='src/assets/images/FARMER4.png'
+                    src='./public/images/FARMER4.png'
                     alt="Third slide"
                 />
             </Carousel.Item>

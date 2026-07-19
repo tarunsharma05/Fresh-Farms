@@ -17,7 +17,7 @@ function Categories() {
                                 <Card.Img 
                                     className='custom-typecard-img'
                                     variant="top"
-                                    src='src/assets/images/fruits2.jpg'
+                                    src='./public/images/fruits2.jpg'
                                     alt='Fruits'
                                 />
 
@@ -32,7 +32,7 @@ function Categories() {
                                 <Card.Img 
                                     className='custom-typecard-img'
                                     variant="top"
-                                    src='src/assets/images/veges.jpg'
+                                    src='./public/images/veges.jpg'
                                     alt='Vegetables'
                                 />
                                 <Card.Body>
@@ -46,7 +46,7 @@ function Categories() {
                                 <Card.Img 
                                     className='custom-typecard-img'
                                     variant="top"
-                                    src='src/assets/images/fruit juice.jpg'
+                                    src='./public/images/fruit juice.jpg'
                                     alt='Fruit Juices'
                                 />
                                 <Card.Body>
