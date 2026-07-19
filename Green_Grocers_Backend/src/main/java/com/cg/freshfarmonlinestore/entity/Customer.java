@@ -12,6 +12,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -21,11 +22,10 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "customer") 
+@Table(name = "customer")
+@PrimaryKeyJoinColumn(name = "user_id")
 public class Customer extends User {
 
-	@Column(name = "customer_id")
-	private long customerId; 
 
 	@NotNull(message = "Phone number cannot be null")
 	@Column(name = "phone", nullable = false, unique = true)
