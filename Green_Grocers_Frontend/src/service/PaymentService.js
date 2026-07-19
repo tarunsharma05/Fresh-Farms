@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const REST_API_URL = "http://localhost:8080/api/payments";
-const ADDRESS_API_URL = "http://localhost:8080/api/addresses"; // Base URL for address API
+const REST_API_URL = "https://fresh-farms-hac7.onrender.com/api/payments";
+const ADDRESS_API_URL = "https://fresh-farms-hac7.onrender.com/api/addresses"; // Base URL for address API
 
 // Fetch a payment by its ID
 export const paymentById = (paymentId) => {
@@ -53,7 +53,7 @@ export const createPayment = (customerId, paymentData) => {
 
 // Create a new order
 export const createOrder = (customerId, paymentId, addressId) => {
-  return axios.post("http://localhost:8080/api/orders/createorder/" + customerId + "/" + paymentId + "/" + addressId)
+  return axios.post("https://fresh-farms-hac7.onrender.com/api/orders/createorder/" + customerId + "/" + paymentId + "/" + addressId)
     .then(response => response)
     .catch(error => {
       console.error('Error creating order:', error);
@@ -83,7 +83,7 @@ export const getAddressesByCustomerId = (customerId) => {
 
 // Fetch customer by ID
 export const getCustomerById = (customerId) => {
-  return axios.get("http://localhost:8080/api/customers/" + customerId)
+  return axios.get("https://fresh-farms-hac7.onrender.com/api/customers/" + customerId)
     .then(response => response)
     .catch(error => {
       console.error('Error fetching customer by ID:', error);

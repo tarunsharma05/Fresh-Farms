@@ -1,6 +1,6 @@
 import axios from "axios";
  
-const REST_API_BASE_URL = "http://localhost:8080/api/items";
+const REST_API_BASE_URL = "https://fresh-farms-hac7.onrender.com/api/items";
  
 // Fetch a list of products based on type
 export const productList = (type) => {

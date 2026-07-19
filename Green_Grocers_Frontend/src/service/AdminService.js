@@ -1,10 +1,10 @@
 import axios from "axios";
 
 // Define base URLs for different services
-const REST_API_BASE_URL_CUSTOMER = "http://localhost:8080/api/customers";
-const REST_API_BASE_URL_CART = "http://localhost:8080/api/carts";
-const REST_API_BASE_URL_ADDRESS = "http://localhost:8080/api/addresses";
-const REST_API_BASE_URL_ITEM = "http://localhost:8080/api/items";
+const REST_API_BASE_URL_CUSTOMER = "https://fresh-farms-hac7.onrender.com/api/customers";
+const REST_API_BASE_URL_CART = "https://fresh-farms-hac7.onrender.com/api/carts";
+const REST_API_BASE_URL_ADDRESS = "https://fresh-farms-hac7.onrender.com/api/addresses";
+const REST_API_BASE_URL_ITEM = "https://fresh-farms-hac7.onrender.com/api/items";
 
 // Fetch all customers
 export const getAllCustomers = () => {

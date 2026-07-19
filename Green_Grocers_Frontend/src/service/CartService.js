@@ -2,7 +2,7 @@
 import axios from 'axios';
  
 // Base URL for the API endpoints
-const API_URL = 'http://localhost:8080/api';
+const API_URL = 'https://fresh-farms-hac7.onrender.com/api';
  
 export const fetchItems = async () => {
   try {
