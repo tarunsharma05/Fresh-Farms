@@ -57,6 +57,7 @@ class PaymentServiceImplTest {
  
         // Create customer, payment, and paymentDto instances for testing
         customer = new Customer();
+        customer.setCustomerId(1L);
         customer.setCart(new Cart());
         customer.getCart().setItemCount(3);
         customer.getCart().setTotalAmount(500.0);
