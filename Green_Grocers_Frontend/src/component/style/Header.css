@@ -1,0 +1,56 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-icon,
+.cart-icon {
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.navbar {
+  font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 276px) {
+  .search-container {
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0 5px;
+  }
+
+  .navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.sticky-nav {
+  background-color: #00806c;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer1 {
+  margin-top: auto;
+}

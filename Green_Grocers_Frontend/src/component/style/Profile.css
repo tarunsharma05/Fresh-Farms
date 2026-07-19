@@ -1,0 +1,63 @@
+/* Profile.css */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-card{
+    cursor: pointer;
+    transition: transform 0.25s;
+    border-radius: 15px;
+}
+
+.profile-card:hover {
+    transform: scale(1.012);
+    box-shadow: 2px 2px 5px grey;
+} 
+
+.info{
+    margin-left: 1.5rem;
+}
+
+/* General container styling */
+.delete-user-container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* .profile-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+/* .profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+} */
+
+.profile-card img {
+  width: 150px;
+  object-fit: contain;
+  border-top-left-radius: 20px; 
+  border-top-right-radius: 20px;
+}
+
+/* .profile-card .card-body {
+    text-align: center;
+} */
+
+.profile-card .img-continer{
+    height: 300px;
+    align-items: center;
+}
+
+
+.adminpaneldiv{
+    min-height: 78vh;
+}

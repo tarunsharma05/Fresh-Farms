@@ -1,0 +1,67 @@
+/* src/components/Cart.css */
+.cart-item-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.cart-item-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+.cart-item-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.cart-item-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Ensure cart icon and badge are positioned correctly */
+.cart-icon {
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 7px;
+  right: 61px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.savelater {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.savelater:hover {
+  text-decoration: none;
+  color: #05740e;
+}
+/* General container styling */
+.cart-container {
+  background-color: #d2e3c3;
+  min-height: 65vh;
+}
+
+/* Ensure card styling and spacing */
+.cart-item-card {
+  margin-bottom: 20px;
+}
+
+.cart-summary-card {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .cart-summary-card {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+ 
+<head>
+ 
+	<title>Invoice</title>
+<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f5f5f5;
+		}
+ 
+		table {
+			border-collapse: collapse;
+			width: 100%;
+		}
+ 
+		th,
+		td {
+			border: 1px solid #dddddd;
+			text-align: left;
+			padding: 8px;
+		}
+ 
+		th {
+			background-color: #f2f2f2;
+		}
+ 
+		.invoice-header {
+			text-align: center;
+			margin-bottom: 20px;
+			font-weight: 10px;
+		}
+ 
+ 
+		.grand-total {
+			font-size: 12px;
+			font-weight: bold;
+ 
+			text-align: right;
+			margin-bottom: 10px;
+		}
+ 
+		.payment-details {
+			font-weight: 10px;
+		}
+</style>
+</head>
+ 
+<body>
+<div class="invoice-header">
+<h2>Invoice</h1>
+</div>
+<div class="order-id">
+<h4>Invoice Number: <span th:text="${order.orderId}"></span></h4>
+<h4 clas="order-date"> Order Date: <span th:text="${order.orderDate}"></span></h4>
+</div>
+ 
+ 
+ 
+	<div class="address-details">
+<h2 class="text-xl font-bold">Delivery Address<span class="text-green-600"></span>
+</h2>
+ 
+		<p>
+<span th:text="${order.address.houseNo }"></span>,
+<span th:text="${order.address.landmark }"></span>
+</p>
+<p>
+<span th:text="${order.address.country}"></span>
+</p>
+<p> <span th:text="${order.address.state}"></span></p>
+<p> <span th:text="${order.address.city}"></span> -
+<span th:text="${order.address.pinCode}"></span>
+</p>
+</p>
+ 
+ 
+	</div>
+ 
+ 
+ 
+	<div>
+<h4 class="text-xl font-bold">Items<span class="text-green-600"></span>
+</h4>
+ 
+ 
+		<table>
+<thead>
+<tr>
+<th>Item name</th>
+<th>Item Price</th>
+<th>Item Type</th>
+<tbody>
+<!-- Iterate over invoice items -->
+<tr th:each="item : ${order.orderedItems}">
+<td th:text="${item.itemName}"></td>
+<td th:text="${item.itemPrice}"></td>
+<td th:text="${item.itemType}"></td>
+ 
+ 
+				</tr>
+</tbody>
+</tr>
+</thead>
+ 
+		</table>
+ 
+ 
+	</div>
+ 
+	<div class="grand-total">
+<h3> Grand Total</h3>
+<p>Total Amount: <span th:text="${order.payment.totalAmount}"></span></p>
+</div>
+ 
+ 
+	<div class="payment-details">
+<h4>Payment Details</h4>
+<!-- Conditional rendering based on payment mode -->
+<th:block th:switch="${order.payment.paymentMode}">
+<th:block th:case="'cod'">
+<p>Payment Method: Cash on Delivery</p>
+<p>Payment Date: <span th:text="${order.payment.paymentDate}"></span></p>
+</th:block>
+<th:block th:case="'card'">
+<p>Payment Method: Card Payment</p>
+<p>Payment Date: <span th:text="${order.payment.paymentDate}"></span></p>
+<p>Card Number: <span th:text="${order.payment.cardNumber}"></span></p>
+<p>Name On Card: <span th:text="${order.payment.nameOnCard}"></span></p>
+</th:block>
+<th:block th:case="'upi'">
+<p>Payment Method: Online Payment</p>
+<p>Payment Date: <span th:text="${order.payment.paymentDate}"></span></p>
+<p>UPI ID: <span th:text="${order.payment.upiId}"></span></p>
+</th:block>
+</th:block>
+</div>
+</body>
+ 
+</html>

@@ -1,0 +1,62 @@
+body{
+  background: none; /* Ensures the body background isn't shown */
+  margin: 0;
+  padding: 0;
+  background-color: #d2e3c3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* HomeCarousel.css */
+.custom-carousel .carousel-item {
+  cursor: pointer;
+  height: 300px; /* Set desired height */
+  max-height: 300px; /* Ensures the height doesn't exceed this value */
+}
+
+.custom-carousel .carousel-item img {
+  object-fit: cover; /* Ensures the image covers the entire area */
+  width: 100%;
+  height: 100%;
+}
+
+
+.profile{
+  margin-top: 10vh;
+}
+
+
+.wishlist{
+  background-color: #f1d67c;
+  min-height: 50vh;
+}
+
+/* Ensure cart icon and badge are positioned correctly */
+.cart-icon {
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.links{
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.links:hover{
+  color: #f1d67c;
+}
